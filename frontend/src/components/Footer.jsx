@@ -1,17 +1,30 @@
-import React from 'react'
+import React from 'react';
+import logo2 from '../assets/logo2.png';
 
 const Footer = () => {
   return (
-    <>
-      <section class="py-10 bg-gray-50 sm:pt-16 lg:pt-24">
-        <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-          <div class="grid grid-cols-3 md:col-span-3 lg:grid-cols-6 gap-y-16 gap-x-12">
-            <div class="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
-              <img class="w-auto h-9" src="https://cdn.rareblocks.xyz/collection/celebration/images/logo.svg" alt="" />
+    <section
+      className="py-10 sm:pt-16 lg:pt-24"
+      style={{
+        backgroundColor: 'mintcream',
+      }}
+    >
+      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0">
+          {/* Logo Section */}
+          <div className="flex-shrink-0">
+            <img className="w-auto h-36" src={logo2} alt="Company Logo" />
+          </div>
 
-              <p class="text-base leading-relaxed text-gray-600 mt-7">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+          {/* Content and Social Media Section */}
+          <div className="flex flex-col space-y-6 md:max-w-xl">
+            {/* Text Content */}
+            <p className="text-base leading-relaxed text-gray-600">
+            Every step of your mental health journey counts. At Psychobeings, we're here to provide meaningful support, expert guidance, and a safe space where you're free to heal and grow
+            </p>
 
-              <ul class="flex items-center space-x-3 mt-9">
+            {/* Social Media Icons */}
+            <ul class="flex items-center space-x-3 mt-9">
                 <li>
                   <a href="#" title="" class="flex items-center justify-center text-white transition-all duration-200 bg-gray-800 rounded-full w-7 h-7 hover:bg-blue-600 focus:bg-blue-600">
                     <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -54,61 +67,15 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
-            </div>
-
-            <div>
-              <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Company</p>
-
-              <ul class="mt-6 space-y-4">
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Features </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Works </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Career </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p class="text-sm font-semibold tracking-widest text-gray-400 uppercase">Help</p>
-
-              <ul class="mt-6 space-y-4">
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Customer Support </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Delivery Details </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Terms & Conditions </a>
-                </li>
-
-                <li>
-                  <a href="#" title="" class="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Privacy Policy </a>
-                </li>
-              </ul>
-            </div>
           </div>
-
-          <hr class="mt-16 mb-10 border-gray-200" />
-
-          <p class="text-sm text-center text-gray-600">© Copyright 2021, All Rights Reserved by Postcraft</p>
         </div>
-      </section>
 
-    </>
-  )
-}
+        <hr className="mt-8 mb-5 border-gray-200" />
 
-export default Footer
+        <p className="text-sm text-center text-gray-600">© Copyright 2024, All Rights Reserved by Psychobeings</p>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;

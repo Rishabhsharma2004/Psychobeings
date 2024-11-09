@@ -1,39 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.png';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
   const NavItems = ({ mobile = false }) => (
     <>
-      <Link
-        to="/"
-        className={`hover:text-gray-400 relative ${mobile ? 'block py-2 text-black' : 'mx-4'
-          }`}
-      >
-        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-gray-400 transition-all duration-300">Home</span>
+      <Link to="/" className={`relative ${mobile ? 'block py-2 text-black' : 'mx-4'}`}>
+        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 transition-all duration-300">Home</span>
       </Link>
-      <Link
-        to="/about"
-        className={`hover:text-gray-400 relative ${mobile ? 'block py-2 text-black' : 'mx-4'
-          }`}
-      >
-        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-gray-400 transition-all duration-300">About</span>
+      <Link to="/about" className={`relative ${mobile ? 'block py-2 text-black' : 'mx-4'}`}>
+        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 transition-all duration-300">About</span>
       </Link>
-      <Link
-        to="/services"
-        className={`hover:text-gray-400 relative ${mobile ? 'block py-2 text-black' : 'mx-4'
-          }`}
-      >
-        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-gray-400 transition-all duration-300">Our Services</span>
+      <Link to="/services" className={`relative ${mobile ? 'block py-2 text-black' : 'mx-4'}`}>
+        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 transition-all duration-300">Our Services</span>
       </Link>
-      <Link
-        to="/contact"
-        className={`hover:text-gray-400 relative ${mobile ? 'block py-2 text-black' : 'mx-4'
-          }`}
-      >
-        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-gray-400 transition-all duration-300">Contact Us</span>
+      <Link to="/contact" className={`relative ${mobile ? 'block py-2 text-black' : 'mx-4'}`}>
+        <span className="hover:underline hover:underline-offset-4 hover:decoration-2 transition-all duration-300">Contact Us</span>
       </Link>
     </>
   );
@@ -42,9 +27,14 @@ const Navbar = () => {
     <>
       <nav className="relative flex items-center justify-between py-6 px-4 sm:px-6 lg:px-8 z-50">
         <div className="flex flex-shrink-0 items-center">
-          <img src={logo} alt="logo" width="140" height="70" className="mx-2" />
+          {/* Responsive logo size */}
+          <img
+            src={logo}
+            alt="logo"
+            className="mx-2 w-24 h-auto sm:w-40 md:w-48 lg:w-56" // Adjusted sizes for different screen breakpoints
+          />
         </div>
-        <div className='flex justify-normal'>
+        <div className="flex justify-normal">
           <div className="hidden md:flex items-center justify-center gap-8 text-md font-normal">
             <NavItems />
           </div>
@@ -61,13 +51,7 @@ const Navbar = () => {
       </nav>
       {/* Custom mobile menu */}
       <div
-        className={`
-      fixed top-0 right-0 bottom-0 
-      w-64 bg-white shadow-lg 
-      transform transition-transform duration-300 ease-in-out
-      ${isOpen ? 'translate-x-0' : 'translate-x-full'}
-      md:hidden overflow-hidden z-50
-    `}
+        className={`fixed top-0 right-0 bottom-0 w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'} md:hidden overflow-hidden z-50`}
       >
         <div className="relative h-full w-full">
           {/* Menu content */}

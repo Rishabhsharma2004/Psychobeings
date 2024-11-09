@@ -9,6 +9,7 @@ module.exports = {
         "mint-cream": "#C2E5D3",
         "pure-white": "#FFFFFF",
         "deep-mint": "#50B682",
+        "light-deep-mint": "#73c79d", // Slightly lighter shade of deep-mint
       },
       backgroundImage: {
         'gradient-top': "linear-gradient(0deg, #0C2B36, #FEFEFE, #C2E5D3, #FFFFFF, #50B682)",
@@ -20,6 +21,7 @@ module.exports = {
         'gradient-top-left': "linear-gradient(225deg, #0C2B36, #FEFEFE, #C2E5D3, #FFFFFF, #50B682)",
         'gradient-bottom-left': "linear-gradient(315deg, #0C2B36, #FEFEFE, #C2E5D3, #FFFFFF, #50B682)",
         'gradient-radial': "radial-gradient(#0C2B36, #FEFEFE, #C2E5D3, #FFFFFF, #50B682)",
+        'deep-mint-gradient': "radial-gradient(circle, #50B682, #C2E5D3)", // New gradient
       }
     },
   },
